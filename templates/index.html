@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer_Churn_Prediction</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #ffdde1, #ee9ca7);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            background-color: white;
+            margin: 60px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #d6336c;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #d6336c;
+        }
+
+        button {
+            width: 95%;
+            padding: 12px;
+            background-color: #d6336c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #a61e4d;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .footer {
+            margin-top: 30px;
+            color: #555;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Customer_Churn_Prediction</h1>
+    <form action="/predict" method="post">
+
+    <input type="text" name="tenure" placeholder="tenure (months)" required>
+    <input type="text" name="gender_Male" placeholder="gender_Male (Male=1, Female=0)" required>
+    <input type="text" name="Partner_Yes" placeholder="Partner_Yes (Yes=1, No=0)" required>
+    <input type="text" name="PhoneService_Yes" placeholder="PhoneService_Yes (Yes=1, No=0)" required>
+    <input type="text" name="Contract_One year" placeholder="Contract_One year (Yes=1, No=0)" required>
+    <input type="text" name="Contract_Two year" placeholder="Contract_Two year (Yes=1, No=0)" required>
+    <input type="text" name="PaperlessBilling_Yes" placeholder="PaperlessBilling_Yes (Yes=1, No=0)" required>
+    <input type="text" name="PaymentMethod_Credit card (automatic)" placeholder="Credit card (automatic) Yes=1, No=0" required>
+    <input type="text" name="PaymentMethod_Electronic check" placeholder="Electronic check Yes=1, No=0" required>
+    <input type="text" name="PaymentMethod_Mailed check" placeholder="Mailed check Yes=1, No=0" required>
+
+    <button type="submit">Customer Churn Prediction</button>
+</form>
+
+<h3><strong>Prediction = {{ prediction }}</strong></h3>
+
+
+
+
+    <div class="footer">
+        <h2>PROJECT BY UMA</h2>
+        <p>DATA SCIENTIST</p>
+    </div>
+</div>
+
+</body>
+</html>
+
